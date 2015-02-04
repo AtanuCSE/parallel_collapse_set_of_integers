@@ -16,7 +16,8 @@ Our task is to find the collapse sum of a set of integers using master/worker pa
 #Parallel Algorithm design:
 We’ve used the master/worker parallel programming paradigm. In our design there is a master process which controls the whole program. Master process is responsible to check if any input exists and then starts taking input from a file. It takes input block by block. Block size is pre-defined and adjustable. So if we instruct to take block input e.g. 10 integers at once, master process will read 10 integers and in next cycle another 10 integers and so on. Then master process will send these inputs to available parallel processes. If system is one processor trivial system master process itself will calculate total collapse result. Otherwise it’ll send block of numbers to worker processes and worker process will calculate the sum of those blocks and send them to the master process. Master process will collect all the results from workers and check for the input end. Then master process will calculate the final collapse result. Following diagram shows the structure of our algorithm:
 
-<a href="https://drive.google.com/open?id=0B7A_IjGiD0swdUlYYy1KbERHalk&authuser=0" target="_blank">Algorithm</a>
+
+![](https://lh5.googleusercontent.com/kq-5Zk0DxyQv7Wa1B0OaYpRkM5-YP8CioekS6gz_Xi0YaBD4Zh0LX3TJaaCZgBp52L62uy8weeI=w1342-h561)
 
 Here is a very effective way to set MPICH in Visual Studio 2010
 <a href="http://nick-goodman.blogspot.com/2012/02/using-mpich-from-ms-visual-studio-2010.html" target="_blank">Using MPICH on Windows 7 with MS Visual Studio 2010</a>
