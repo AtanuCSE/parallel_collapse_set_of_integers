@@ -22,6 +22,21 @@ We’ve used the master/worker parallel programming paradigm. In our design ther
 Here is a very effective way to set MPICH in Visual Studio 2010
 <a href="http://nick-goodman.blogspot.com/2012/02/using-mpich-from-ms-visual-studio-2010.html" target="_blank">Using MPICH on Windows 7 with MS Visual Studio 2010</a>
 
+If you successfully compile the program, here is a manual to run
+
+#Manual (how to run the program, input and output)
+1.	Put the .exe file and input file (in input.txt format) in same folder.<br/>
+2.	Go to cmd.exe on the system and run as administrator<br/>
+3.	Go to MPICH bin directory in command prompt. (i. e. C:\Program Files\MPICH\mpd\bin)<br/>
+4.	Execute MPIRegister.exe<br/>
+5.	Enter your windows credentials<br/>
+6.	Check validity (i.e. mpiregister –validate –user [your account username])<br/>
+7.	If it’s showing “SUCCESS”, then all ok. If not then repeat step 4-6.<br/>
+8.	Go to the .exe file directory in command prompt. (i. e. [your computer directory to exe file])<br/>
+9.	Execute command MPIRun.exe np -Y X.exe (X is the name of the .exe file, Y is number of processes)<br/>
+10.	Get output in the command prompt.<br/>
+
+
 
 
 
